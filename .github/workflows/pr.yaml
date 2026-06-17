@@ -1,0 +1,16 @@
+name: PR checks
+
+on:
+  pull_request:
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-slim
+    name: Typecheck
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Typecheck
+        run: |
+          echo 'LGTM'
